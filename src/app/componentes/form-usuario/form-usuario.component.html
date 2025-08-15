@@ -1,0 +1,40 @@
+<form [formGroup]="form" class="principal__formulario" id="formulario" (ngSubmit)="enviar()">
+    <div *ngIf="campos.includes('nome')" class="formulario__campo ">
+        <label class="campo__etiqueta" for="nome">Nome completo :</label>
+        <input id="nome" class="campo__escrita" formControlName="nome">
+        <p *ngIf="nome?.touched && nome?.invalid" class="erro__texto">
+            <span *ngIf="nome?.errors?.['required']">O campo de nome deve ser preenchido.</span>
+            <span *ngIf="nome?.errors?.['minlength']">Mínimo de 2 caracteres.</span>
+        </p>
+    </div>
+    <div *ngIf="campos.includes('telefone')" class="formulario__campo">
+        <label class="campo__etiqueta" for="telefone">Telefone :</label>
+        <input id="telefone" type="tel" placeholder="(XX) XXXXX-XXXX" class="campo__escrita"
+            formControlName="telefone" />
+        <p *ngIf="telefone?.touched && telefone?.invalid" class="erro__texto">
+            <span *ngIf="telefone?.errors?.['required']">O campo de telefone deve ser preenchido.</span>
+            <span *ngIf="telefone?.errors?.['pattern']">O formato de telefone não está correto.</span>
+        </p>
+    </div>
+    <div *ngIf="campos.includes('email')" class="formulario__campo">
+        <label class="campo__etiqueta" for="email">E-mail :</label>
+        <input id="email" type="email" placeholder="exemplo@email.com" class="campo__escrita" formControlName="email" />
+        <p *ngIf="email?.touched && email?.invalid" class="erro__texto">
+            <span *ngIf="email?.errors?.['required']">O campo de email deve ser preenchido.</span>
+            <span *ngIf="email?.errors?.['pattern']">O formato de e-mail não está correto.</span>
+        </p>
+    </div>
+    <div *ngIf="campos.includes('nascimento')" class="formulario__campo">
+        <label class="campo__etiqueta" for="nascimento">Data de Nascimento :</label>
+        <input id="nascimento" type="date" class="campo__escrita" formControlName="nascimento" />
+        <p *ngIf="nascimento?.touched && nascimento?.invalid" class="erro__texto">
+            <span *ngIf="nascimento?.errors?.['required']"> campo de
+                nascimento deve ser preenchido.</span>
+            <span *ngIf="nascimento?.errors?.['maiorIdadeValidator']">Obrigatório ser maior de idade.</span>
+        </p>
+    </div>
+    <div>
+        <button type="submit" [disabled]="form.invalid" class="formulario__botao">Enviar formulário</button>
+    </div>
+
+</form>

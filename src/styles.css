@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilização global do projeto*/
+
+:root {
+  --cor-de-fundo: #fbfcff;
+  --titulo-fundo: #1c4872;
+  --escrita-fundo: rgb(199, 208, 219);
+  --escrita-borda: #00557f;
+  --branco: #FFFFFF;
+  --laranja: #ff9e44;
+  --azul-degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+  --fonte-principal: "Poppins";
+  --azul: #1e6397;
+  --fonte-secundario: "Josefin Sans";
+  --vermelho: #D94937;
+  --botao-hover: #1566b1;
+  --roxo: #7a5eb3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #f5f5f5;
+}
+
+body {
+  background-color: rgb(252, 252, 252);
+  margin: 0%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+app-footer {
+  width: 100%;
+  margin-top: auto;
+}
+
+.conteudo-principal {
+  flex: 1;
+  /* ocupa o espaço entre header e footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* centraliza horizontalmente */
+  min-height: calc(100vh - 120px);
+  /* altura mínima para empurrar footer */
+  padding: 120px 20px 80px;
+  /* espaço para header e footer */
+}
+
+.conteudo-principal>* {
+  max-width: 600px;
+  /* mantém largura do formulário ou card */
+  width: 100%;
+}

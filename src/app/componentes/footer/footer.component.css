@@ -1,0 +1,6 @@
+.rodape {
+    background: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 1rem 0;
+}

@@ -1,0 +1,69 @@
+/* Banner de sucesso */
+.banner {
+    background: linear-gradient(to right, var(--azul), var(--azul-degrade));
+    color: var(--branco);
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    font-family: 'Arial', sans-serif;
+}
+
+@media screen and (min-width: 1024px) {
+    .banner__titulo {
+        font-size: 2.25rem;
+    }
+}
+
+/* Container principal do cadastro */
+.cadastro {
+    max-width: 600px;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cadastro:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagem de sucesso */
+.cadastro__imagem {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 150px;
+    height: auto;
+}
+
+/* Títulos e subtítulos */
+.principal__titulo {
+    font-family: 'Georgia', serif;
+    font-weight: 800;
+    font-size: 2rem;
+    color: var(--laranja);
+    margin-bottom: 1rem;
+}
+
+.principal__subtitulo {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--azul);
+    margin-bottom: 1.5rem;
+}
+
+.principal__texto {
+    font-family: 'Georgia', serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+    color: var(--azul-degrade);
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}

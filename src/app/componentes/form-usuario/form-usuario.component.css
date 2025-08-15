@@ -1,0 +1,74 @@
+.formulario__campo {
+    margin-bottom: 1.25rem;
+}
+
+.campo__etiqueta {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--azul);
+}
+
+.campo__escrita {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--escrita-borda);
+    background-color: var(--escrita-fundo);
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.campo__escrita:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 8px rgba(0, 119, 182, 0.15);
+    background-color: #fff;
+}
+
+
+.formulario__botao {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    background: linear-gradient(to right, var(--laranja), var(--botao-hover));
+    border: none;
+    border-radius: 12px;
+    color: var(--branco);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s ease;
+}
+
+.formulario__botao:hover:not(:disabled) {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+.formulario__botao:active {
+    transform: translateY(0);
+}
+
+.formulario__botao:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.erro__texto {
+    font-size: 0.875rem;
+    color: var(--vermelho);
+    margin-top: 0.25rem;
+    padding-left: 0.25rem;
+}
+
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* ou center para centralizar verticalmente */
+    min-height: calc(100vh - 120px);
+    /* considerando altura header+footer */
+}
+
