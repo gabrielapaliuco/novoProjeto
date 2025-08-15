@@ -23,8 +23,6 @@ export class FormUsuarioComponent implements OnInit {
 
   form!: FormGroup;
 
-  
-
   constructor(
     private fb: FormBuilder
   ) { }
