@@ -29,9 +29,9 @@ export class FormUsuarioComponent implements OnInit {
   ngOnInit(): void {
     this.form = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(2)]],
-      nascimento: ['', [Validators.required, maiorIdadeValidator]],
       telefone: ['', [Validators.required, Validators.pattern(FormUsuarioComponent.TELEFONE_REGEX)]],
-      email: ['', [Validators.required, Validators.pattern(FormUsuarioComponent.EMAIL_REGEX)]]
+      email: ['', [Validators.required, Validators.pattern(FormUsuarioComponent.EMAIL_REGEX)]],
+      nascimento: ['', [Validators.required, maiorIdadeValidator]]
     });
   }
 
