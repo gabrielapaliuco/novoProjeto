@@ -1,6 +1,6 @@
 <h2 class="principal__titulo">Cadastre-se aqui !</h2>
 <div class="cadastro-container">
     <h3 class="principal__subtitulo">Dados Pessoais : </h3>
-    <app-form-usuario [campos]="camposFormulario" (submitForm)="cadastrar($event)">
+    <app-form-usuario [campos]="camposFormulario" (submitForm)="cadastrar($event)" [textoBotao]="'Cadastrar'">
     </app-form-usuario>
 </div>

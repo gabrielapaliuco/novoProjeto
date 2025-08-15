@@ -13,6 +13,7 @@ export class FormUsuarioComponent implements OnInit {
   private static readonly EMAIL_REGEX = /^[\w.-]+@[\w-]+(\.[\w-]+)+$/;
 
   @Input() campos: string[] = [];
+  @Input() textoBotao: string = '';
   @Output() submitForm = new EventEmitter<any>();
 
   get nome() { return this.form.get('nome'); }
@@ -21,6 +22,8 @@ export class FormUsuarioComponent implements OnInit {
   get nascimento() { return this.form.get('nascimento'); }
 
   form!: FormGroup;
+
+  
 
   constructor(
     private fb: FormBuilder

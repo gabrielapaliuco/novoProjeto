@@ -27,7 +27,6 @@
     background-color: #fff;
 }
 
-
 .formulario__botao {
     width: 100%;
     padding: 0.85rem 1rem;
@@ -67,8 +66,5 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    /* ou center para centralizar verticalmente */
     min-height: calc(100vh - 120px);
-    /* considerando altura header+footer */
 }
-

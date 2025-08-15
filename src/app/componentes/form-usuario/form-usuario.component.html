@@ -33,8 +33,8 @@
             <span *ngIf="nascimento?.errors?.['maiorIdadeValidator']">Obrigatório ser maior de idade.</span>
         </p>
     </div>
-    <div>
-        <button type="submit" [disabled]="form.invalid" class="formulario__botao">Enviar formulário</button>
+    <div class="formulario__botao">
+        <button type="submit" [disabled]="form.invalid">{{textoBotao}}</button>
     </div>
 
 </form>
