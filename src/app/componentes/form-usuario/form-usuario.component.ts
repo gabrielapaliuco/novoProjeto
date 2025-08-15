@@ -24,10 +24,10 @@ export class FormUsuarioComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder
-  ) { } // É utilizado o constructor para inicializar esses dados. Também é possível usar o ngOnInit no caso de esperar dados externos(API e @Input)
+  ) { }
 
   ngOnInit(): void {
-    this.form = this.fb.group({ //Criando o agrupamento com FormBuilder
+    this.form = this.fb.group({
       nome: ['', [Validators.required, Validators.minLength(2)]],
       nascimento: ['', [Validators.required, maiorIdadeValidator]],
       telefone: ['', [Validators.required, Validators.pattern(FormUsuarioComponent.TELEFONE_REGEX)]],

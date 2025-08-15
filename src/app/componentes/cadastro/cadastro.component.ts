@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup } from '@angular/forms';
 
@@ -10,9 +10,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 export class CadastroComponent{
 
   cadastroForm!: FormGroup
-  
-  //private router = inject(Router); //Injeção de dependência para realizar rotas
-  //private fb = inject(FormBuilder); // Injeção de dependência para melhorar o cadastro form
   
   
   
