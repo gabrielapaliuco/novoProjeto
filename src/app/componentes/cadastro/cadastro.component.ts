@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cadastro',
@@ -9,8 +10,11 @@ export class CadastroComponent{
 
   camposFormulario = ['nome', 'telefone', 'email', 'nascimento'];
 
+  constructor(private router: Router) {}
+
   cadastrar(dados: any) {
-    console.log('Dados do cadastro: ', dados);
+    console.log('Dados do usuário: ', dados);
+    this.router.navigate(['/login']);
   }
   
 }
