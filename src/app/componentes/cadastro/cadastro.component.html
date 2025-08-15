@@ -1,2 +1,6 @@
 <h2 class="principal__titulo">Cadastre-se aqui !</h2>
 <h3 class="principal__subtitulo">Dados Pessoais : </h3>
+<app-form-usuario
+[campos]="camposFormulario"
+(submitForm)="cadastrar($event)">
+</app-form-usuario>
