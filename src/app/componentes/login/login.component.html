@@ -1,1 +1,5 @@
-<p>login works!</p>
+<h2 class="principal__titulo">Faça Login :</h2>
+<div class="login-container">
+    <img src="assets/icone/icone-perfil.png" alt="Ícone de perfil">
+    <app-form-usuario [campos]="camposFormulario" (submitForm)="login($event)" [textoBotao]="'Entrar'"></app-form-usuario>
+</div>
